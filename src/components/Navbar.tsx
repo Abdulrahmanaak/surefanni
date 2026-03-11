@@ -21,7 +21,7 @@ export default function Navbar() {
                     <div className="flex-shrink-0 flex items-center">
                         <Link href="/" className="flex items-center group">
                             <img
-                                src="/images/logo.png"
+                                src="/public/images/logo.png"
                                 alt="شور فني"
                                 className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                             />
