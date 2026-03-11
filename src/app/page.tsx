@@ -72,7 +72,7 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/5 to-transparent" />
                   <div className="bg-white dark:bg-secondary-900 rounded-[3rem] overflow-hidden relative border border-secondary-100 dark:border-secondary-800">
                     <img
-                      src="/public/images/app-dashboard.png"
+                      src="images/app-dashboard.png"
                       alt="واجهة تطبيق شور فني"
                       className="w-full h-auto object-contain transition-transform duration-1000 group-hover:scale-105"
                     />
@@ -104,7 +104,7 @@ export default function Home() {
               <div className="lg:w-1/2 relative group flex justify-center">
                 <div className="absolute -inset-10 bg-primary-500/10 dark:bg-primary-500/20 rounded-full blur-[100px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
                 <img
-                  src="/public/images/app-splash.png"
+                  src="images/app-splash.png"
                   alt="تطبيق شور فني"
                   className="relative z-10 w-full max-w-[360px] h-auto drop-shadow-[0_45px_55px_rgba(0,0,0,0.3)] transition-transform duration-1000 group-hover:scale-105"
                 />
