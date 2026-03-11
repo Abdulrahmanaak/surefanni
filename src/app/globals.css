@@ -1,26 +1,68 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-sans: var(--font-cairo), "Cairo", sans-serif;
+
+  /* Brand Red (#E60023) Shades */
+  --color-primary-50: #fdf2f4;
+  --color-primary-100: #fae6e9;
+  --color-primary-200: #f3c7ce;
+  --color-primary-300: #eba8b3;
+  --color-primary-400: #dd6a7b;
+  --color-primary-500: #e60023;
+  /* True Brand Red */
+  --color-primary-600: #cf0020;
+  --color-primary-700: #ad001a;
+  --color-primary-800: #8a0015;
+  --color-primary-900: #710011;
+  --color-primary-950: #4a000b;
+
+  /* Charcoal/Grey Shades (#282828 & #707070) */
+  --color-secondary-50: #f6f6f6;
+  --color-secondary-100: #e7e7e7;
+  --color-secondary-200: #d1d1d1;
+  --color-secondary-300: #b0b0b0;
+  --color-secondary-400: #888888;
+  --color-secondary-500: #707070;
+  /* Muted Body Text */
+  --color-secondary-600: #5d5d5d;
+  --color-secondary-700: #4f4f4f;
+  --color-secondary-800: #454545;
+  --color-secondary-900: #282828;
+  /* Dark Headers */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #282828;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: #121212;
+      --foreground: #f6f6f6;
+    }
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    @apply antialiased transition-colors duration-300;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Custom Utilities for Glassmorphism and Gradients */
+@layer utilities {
+  .glass {
+    @apply bg-white/70 dark:bg-[#1f1f1f]/70 backdrop-blur-md border border-white/20 dark:border-white/5 shadow-sm;
+  }
+
+  .glass-card {
+    @apply bg-white/90 dark:bg-[#1a1a1a]/80 backdrop-blur-xl border border-secondary-100/50 dark:border-secondary-800/50 shadow-xl rounded-2xl;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-l from-primary-600 to-primary-400 dark:from-primary-400 dark:to-primary-300;
+  }
 }
