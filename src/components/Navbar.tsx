@@ -49,7 +49,7 @@ export default function Navbar() {
                             rel="noopener noreferrer"
                             className="bg-primary-500 hover:bg-primary-600 text-white px-8 py-2.5 rounded-full font-bold transition-all shadow-lg hover:shadow-primary-500/30 hover:scale-105 active:scale-95"
                         >
-                            دخول الشركات
+                            اكتشف منصة الأعمال
                         </a>
                     </div>
 
@@ -93,7 +93,7 @@ export default function Navbar() {
                                 rel="noopener noreferrer"
                                 className="bg-primary-500 text-white w-full py-4 rounded-xl font-bold shadow-lg shadow-primary-500/30 active:scale-95 transition-transform"
                             >
-                                دخول الشركات
+                                اكتشف منصة الأعمال
                             </a>
                         </div>
                     </div>
