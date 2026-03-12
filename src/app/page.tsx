@@ -3,14 +3,14 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white dark:bg-[#121212] text-secondary-900 dark:text-[#f6f6f6] flex flex-col font-sans selection:bg-primary-200 selection:text-primary-900 overflow-x-hidden">
+    <div className="min-h-screen bg-white dark:bg-secondary-950 text-secondary-900 dark:text-secondary-50 flex flex-col font-sans selection:bg-primary-200 selection:text-primary-900 overflow-x-hidden">
       <Navbar />
 
       <main className="flex-grow pt-20">
         {/* --- Hero Section --- */}
         <section id="hero" className="relative pt-24 pb-32 lg:pt-36 lg:pb-40 overflow-hidden">
           {/* Decorative Backgrounds */}
-          <div className="absolute top-0 right-0 w-full h-[800px] bg-gradient-to-b from-secondary-50 to-white dark:from-[#1a1a1a] dark:to-[#121212] -z-20" />
+          <div className="absolute top-0 right-0 w-full h-[800px] bg-gradient-to-b from-secondary-50 to-white dark:from-secondary-900 dark:to-secondary-950 -z-20" />
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-primary-500/5 dark:bg-primary-500/10 blur-[120px] rounded-full point-events-none -z-10" />
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -62,32 +62,66 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Left Side: App Mockup */}
+              {/* Left Side: Interactive Service Visualization (Redesigned) */}
               <div className="lg:w-1/2 relative animate-fade-in-up animation-delay-500 flex justify-center items-center">
-                {/* Decorative floating assets */}
                 <div className="absolute -top-10 -left-10 w-48 h-48 bg-primary-500/10 rounded-full blur-3xl animate-pulse" />
                 <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-secondary-900/5 rounded-full blur-3xl" />
 
-                <div className="relative z-10 bg-secondary-50 dark:bg-[#1a1a1a] rounded-[3.5rem] p-3 md:p-4 border border-secondary-200 dark:border-secondary-800 shadow-2xl overflow-hidden group max-w-[480px]">
-                  <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/5 to-transparent" />
-                  <div className="bg-white dark:bg-secondary-900 rounded-[3rem] overflow-hidden relative border border-secondary-100 dark:border-secondary-800">
-                    <img
-                      src="images/app-dashboard.png"
-                      alt="واجهة تطبيق شور فني"
-                      className="w-full h-auto object-contain transition-transform duration-1000 group-hover:scale-105"
-                    />
-                  </div>
-                </div>
-
-                {/* Status Float Card (Premium Touch) */}
-                <div className="absolute -bottom-6 -left-6 bg-white dark:bg-secondary-800 px-6 py-4 rounded-2xl shadow-xl border border-secondary-100 dark:border-secondary-700 z-20 hidden md:block animate-bounce shadow-primary-500/10">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center text-green-500">
-                      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor font-bold"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
+                <div className="relative z-10 w-full max-w-md aspect-square flex items-center justify-center">
+                  {/* Abstract AI Diagnostic Visual */}
+                  <div className="relative w-72 h-72 md:w-80 md:h-80">
+                    <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/20 to-transparent rounded-full animate-spin-slow" />
+                    <div className="absolute inset-4 bg-white dark:bg-secondary-900 rounded-3xl border border-secondary-100 dark:border-secondary-800 shadow-2xl overflow-hidden flex flex-col p-6">
+                      <div className="flex items-center gap-2 mb-6">
+                        <div className="w-3 h-3 rounded-full bg-red-400" />
+                        <div className="w-3 h-3 rounded-full bg-yellow-400" />
+                        <div className="w-3 h-3 rounded-full bg-green-400" />
+                        <div className="h-2 w-24 bg-secondary-100 dark:bg-secondary-800 rounded-full mx-2" />
+                      </div>
+                      
+                      <div className="space-y-4">
+                        <div className="flex items-center gap-3">
+                          <div className="w-10 h-10 rounded-xl bg-primary-500/10 flex items-center justify-center text-primary-500">
+                            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                          </div>
+                          <div className="flex-1">
+                            <div className="h-2 w-3/4 bg-secondary-100 dark:bg-secondary-800 rounded-full mb-2" />
+                            <div className="h-1.5 w-1/2 bg-secondary-100 dark:bg-secondary-800 rounded-full opacity-50" />
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <div className="w-10 h-10 rounded-xl bg-green-500/10 flex items-center justify-center text-green-500">
+                            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                          </div>
+                          <div className="flex-1">
+                            <div className="h-2 w-2/3 bg-secondary-100 dark:bg-secondary-800 rounded-full mb-2" />
+                            <div className="h-1.5 w-1/3 bg-secondary-100 dark:bg-secondary-800 rounded-full opacity-50" />
+                          </div>
+                        </div>
+                        <div className="mt-6 pt-6 border-t border-secondary-100 dark:border-secondary-800">
+                          <div className="flex justify-between items-end">
+                            <div>
+                              <div className="text-[10px] font-bold text-secondary-400 uppercase mb-1">دقة التشخيص</div>
+                              <div className="text-2xl font-black text-primary-500 leading-none">99.2%</div>
+                            </div>
+                            <div className="w-16 h-8 bg-primary-50 dark:bg-primary-900/30 rounded-lg flex items-center justify-center">
+                              <div className="flex gap-0.5 items-end h-4">
+                                <div className="w-1.5 h-2 bg-primary-500 rounded-full" />
+                                <div className="w-1.5 h-4 bg-primary-500 rounded-full" />
+                                <div className="w-1.5 h-3 bg-primary-500 rounded-full" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div>
-                      <div className="text-sm font-black text-secondary-900 dark:text-white leading-none mb-1">فحص ذكي</div>
-                      <div className="text-[10px] text-secondary-500 dark:text-secondary-400 font-bold uppercase">جاهز للتحليل</div>
+                    {/* Floating Premium Badge */}
+                    <div className="absolute -top-4 -right-4 bg-white dark:bg-secondary-800 p-4 rounded-2xl shadow-xl border border-secondary-100 dark:border-secondary-700 z-20 animate-bounce">
+                      <div className="text-xs font-black text-secondary-900 dark:text-white mb-1">خبير متصل</div>
+                      <div className="flex items-center gap-1.5">
+                        <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                        <span className="text-[10px] text-secondary-500 dark:text-secondary-400 font-bold">متاح الآن</span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -98,16 +132,33 @@ export default function Home() {
         </section>
 
         {/* --- Features Grid (Merged Highlights) --- */}
-        <section id="about" className="py-32 relative overflow-hidden bg-white dark:bg-[#121212]">
+        <section id="about" className="py-32 relative overflow-hidden bg-white dark:bg-secondary-950">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col lg:flex-row gap-20 items-center mb-20 text-center lg:text-right">
               <div className="lg:w-1/2 relative group flex justify-center">
-                <div className="absolute -inset-10 bg-primary-500/10 dark:bg-primary-500/20 rounded-full blur-[100px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
-                <img
-                  src="images/app-splash.png"
-                  alt="تطبيق شور فني"
-                  className="relative z-10 w-full max-w-[360px] h-auto drop-shadow-[0_45px_55px_rgba(0,0,0,0.3)] transition-transform duration-1000 group-hover:scale-105"
-                />
+                <div className="absolute -inset-10 bg-primary-500/10 dark:bg-primary-500/20 rounded-full blur-[100px] opacity-100 transition-opacity duration-1000" />
+                <div className="relative z-10 w-full max-w-[420px] bg-white dark:bg-secondary-900 p-8 rounded-[3rem] border border-secondary-100 dark:border-secondary-800 shadow-2xl">
+                  <div className="mb-8">
+                    <div className="w-16 h-16 bg-primary-500 text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-primary-500/40">
+                      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                    </div>
+                    <h3 className="text-3xl font-black text-secondary-900 dark:text-white mb-2 leading-tight">وفر وقتك ومجهودك</h3>
+                    <p className="text-secondary-500 dark:text-secondary-400 font-bold">تجربة صيانة متكاملة من بيتك</p>
+                  </div>
+                  
+                  <div className="space-y-4">
+                    {[
+                      { label: "توفير وقت البحث", value: "+3 ساعات", color: "text-primary-500" },
+                      { label: "دقة في التشخيص", value: "عالية جداً", color: "text-green-500" },
+                      { label: "سهولة التواصل", value: "فورية", color: "text-blue-500" }
+                    ].map((stat, i) => (
+                      <div key={i} className="flex justify-between items-center p-4 bg-secondary-50 dark:bg-secondary-800/50 rounded-2xl border border-secondary-100 dark:border-secondary-800">
+                        <span className="text-sm font-bold text-secondary-600 dark:text-secondary-400">{stat.label}</span>
+                        <span className={`text-sm font-black ${stat.color}`}>{stat.value}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
 
               <div className="lg:w-1/2 space-y-8">
@@ -166,7 +217,7 @@ export default function Home() {
         </section>
 
         {/* --- Services Section --- */}
-        <section id="services" className="py-24 bg-secondary-50 dark:bg-[#151515] border-y border-secondary-100 dark:border-secondary-900">
+        <section id="services" className="py-24 bg-secondary-50 dark:bg-secondary-900/50 border-y border-secondary-100 dark:border-secondary-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-base text-primary-500 font-bold tracking-wide uppercase mb-2">خدماتنا المتوفرة حالياً</h2>
@@ -208,7 +259,7 @@ export default function Home() {
                   icon: "M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
                 }
               ].map((feature, idx) => (
-                <div key={idx} className="group bg-white dark:bg-[#1a1a1a] p-8 rounded-[2rem] border border-secondary-100 dark:border-secondary-800 transition-all duration-300 hover:shadow-2xl hover:shadow-primary-500/10 hover:-translate-y-2 relative overflow-hidden">
+                <div key={idx} className="group bg-white dark:bg-secondary-900 p-8 rounded-[2rem] border border-secondary-100 dark:border-secondary-800 transition-all duration-300 hover:shadow-2xl hover:shadow-primary-500/10 hover:-translate-y-2 relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-primary-500/5 rounded-full blur-[40px] group-hover:bg-primary-500/10 transition-colors" />
                   <div className="w-14 h-14 bg-primary-50 dark:bg-primary-900/30 rounded-2xl flex items-center justify-center text-primary-500 mb-6 group-hover:scale-110 group-hover:bg-primary-500 group-hover:text-white transition-all shadow-sm">
                     <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -226,7 +277,7 @@ export default function Home() {
         </section>
 
         {/* --- Testimonials Section --- */}
-        <section className="py-24 bg-white dark:bg-[#121212]">
+        <section className="py-24 bg-white dark:bg-secondary-950">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-5xl font-black text-secondary-900 dark:text-white mb-4">آراء عملاؤنا</h2>
@@ -251,7 +302,7 @@ export default function Home() {
                   comment: "الفنيين يعلمونك كيف تفحص السيارة وتعرف المشكلة انت قبل تروح الصناعية!"
                 }
               ].map((item, idx) => (
-                <div key={idx} className="bg-secondary-50 dark:bg-[#1a1a1a] p-8 rounded-[2.5rem] border border-secondary-100 dark:border-secondary-800 shadow-sm relative flex flex-col items-center text-center">
+                <div key={idx} className="bg-secondary-50 dark:bg-secondary-900 p-8 rounded-[2.5rem] border border-secondary-100 dark:border-secondary-800 shadow-sm relative flex flex-col items-center text-center">
                   <h3 className="text-xl font-bold text-secondary-900 dark:text-white mb-4">{item.title}</h3>
                   <p className="text-secondary-600 dark:text-secondary-400 font-medium leading-relaxed mb-8 italic">
                     &quot;{item.comment}&quot;
@@ -276,7 +327,7 @@ export default function Home() {
 
         {/* --- Unified B2B Redirect Section --- */}
         <section className="relative py-24 overflow-hidden">
-          <div className="absolute inset-0 bg-secondary-900 dark:bg-[#0a0a0a]" />
+          <div className="absolute inset-0 bg-secondary-900 dark:bg-secondary-950" />
           {/* Gradients */}
           <div className="absolute -top-24 -left-24 w-96 h-96 bg-primary-600/20 blur-[100px] rounded-full" />
           <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-primary-400/20 blur-[100px] rounded-full" />

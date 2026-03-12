@@ -29,7 +29,32 @@
   --color-secondary-700: #4f4f4f;
   --color-secondary-800: #454545;
   --color-secondary-900: #282828;
+  --color-secondary-950: #121212;
   /* Dark Headers */
+  --animate-spin-slow: spin 8s linear infinite;
+  --animate-fade-in-up: fade-in-up 0.8s ease-out forwards;
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 
 @layer base {
